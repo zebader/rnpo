@@ -6,13 +6,13 @@ img: 'holodia-use-case-fitness.jpg'
 
 ## My role
 
-As the sole Product Manager at Holodia, I worked with our multidisciplinary team and founders to define the product strategy and roadmap. I conducted user research and interviews, designed a new onboarding experience, and led the development of a groundbreaking AR experience from concept to launch. I collaborated closely with the CEO, COO, and lead engineer to ensure our goals aligned with both user needs and business objectives
+As the sole Product Manager at Holodia, I worked with our multidisciplinary team and founders to define the product strategy and roadmap. I conducted user research and interviews, designed a new onboarding experience, and led the development of a groundbreaking AR experience from concept to launch. I collaborated closely with the CEO, COO, and lead engineer to ensure our goals aligned with both user needs and business objectives.
 
 ## Product
 
-Holofit is a VR fitness app with a subscription model that motivates users to work out with rowing machines, bikes, and ellipticals. With captivating virtual environments (Holoworlds) like Antarctica and underwater scenes, users can immerse themselves in their workouts. However, as a subscription product, maintaining user engagement was a challenge, especially with a small team and limited resources
+Holofit is a VR fitness app with a subscription model that motivates users to work out with rowing machines, bikes, and ellipticals. With captivating virtual environments (Holoworlds) like Antarctica and underwater scenes, users can immerse themselves in their workouts. However, as a subscription product, maintaining user engagement was a challenge, especially with a small team and limited resources.
 
-## Problem definition"
+## Problem definition
 
 Holoworlds are the most loved feature by our users, but their lifecycle was short. Each world took 4–6 months to produce, meaning we could only release 2–3 Holoworlds per year. Users quickly wore out the novelty of a new Holoworld within 1–2 months, which impacted user engagement.
 
@@ -29,7 +29,7 @@ To address these challenges, I first redesigned the release strategy for Holowor
 
 Next, I introduced randomization to Holoworlds, making certain characters and elements appear unpredictably during sessions. This made environments feel dynamic and 'alive,' extending user interest and engagement.
 
-Finally, I designed new unlockable rewards, such as holoships and avatar outfits, attainable only by collecting all trophies within an environment or seasonal event. This provided users with tangible, shareable incentives to fully engage with the collectible system."
+Finally, I designed new unlockable rewards, such as holoships and avatar outfits, attainable only by collecting all trophies within an environment or seasonal event. This provided users with tangible, shareable incentives to fully engage with the collectible system.
 
 ## Metrics
 

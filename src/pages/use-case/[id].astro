@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
   const useCases = await getCollection("useCases");
@@ -31,11 +32,13 @@ const { Content } = await render(useCase);
         {client}
       </h1>
     </div>
-    <img
+    <Image
       transition:name={`img-${slug}`}
       src={`/${img}`}
-      class="w-72"
+      class="w-80"
       alt={title}
+      width={900}
+      height={900}
     />
     <div class="w-full">
       <h1 transition:name={`title-${useCase.slug}`}>

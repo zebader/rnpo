@@ -1,26 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
-
+import { Image } from "astro:assets";
 const useCases = await getCollection("useCases");
 ---
 
 <Layout>
   <!-- <Welcome /> -->
-  <div class="prose">
+  <div class="prose prose-xl py-16 flex items-center gap-4">
+    <span class="text-5xl">&#128075;</span>
     <h1>Raquel Navarro</h1>
   </div>
-  <p>
+
+  <section class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
     {
       useCases.map((useCase) => {
         return (
           <article>
-            <a href={`/use-case/${useCase.slug}`}>
-              <img
+            <a
+              href={`/use-case/${useCase.slug}`}
+              class="flex flex-col items-center"
+            >
+              <Image
                 transition:name={`img-${useCase.slug}`}
                 src={`/${useCase.data.img}`}
-                class="w-64"
+                width={900}
+                height={900}
                 alt={useCase.data.title}
+                class="w-full"
               />
               <h2 transition:name={`title-${useCase.slug}`}>
                 {useCase.data.title}
@@ -30,5 +37,5 @@ const useCases = await getCollection("useCases");
         );
       })
     }
-  </p>
+  </section>
 </Layout>
