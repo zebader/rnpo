@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const useCases = await getCollection("useCases");
 ---
 
 <Layout>
-	<Welcome />
+  <!-- <Welcome /> -->
+  <div class="prose">
+    <h1>Raquel Navarro</h1>
+  </div>
+  <p>
+    {
+      useCases.map((useCase) => {
+        return (
+          <article>
+            <a href={`/use-case/${useCase.slug}`}>
+              <img
+                transition:name={`img-${useCase.slug}`}
+                src={`/${useCase.data.img}`}
+                class="w-64"
+                alt={useCase.data.title}
+              />
+              <h2 transition:name={`title-${useCase.slug}`}>
+                {useCase.data.title}
+              </h2>
+            </a>
+          </article>
+        );
+      })
+    }
+  </p>
 </Layout>

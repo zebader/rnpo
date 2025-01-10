@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const useCases = await getCollection("useCases");
+
+  return useCases.map((useCase) => ({
+    params: {
+      id: useCase.slug,
+    },
+    props: { useCase },
+  }));
+}
+
+const { useCase } = Astro.props;
+const { data, slug } = useCase;
+const { client, title, img } = data;
+
+const { Content } = await render(useCase);
+---
+
+<Layout title={`${title}`}>
+  <a href="/">
+    <h1>Back</h1>
+  </a>
+
+  <div class="flex flex-col items-center mx-auto my-auto prose">
+    <div>
+      <h1 class="text-bubble-gum">
+        {client}
+      </h1>
+    </div>
+    <img
+      transition:name={`img-${slug}`}
+      src={`/${img}`}
+      class="w-72"
+      alt={title}
+    />
+    <div class="w-full">
+      <h1 transition:name={`title-${useCase.slug}`}>
+        {title}
+      </h1>
+    </div>
+    <div>
+      <Content />
+    </div>
+  </div>
+</Layout>
