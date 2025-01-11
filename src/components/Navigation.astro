@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+---
+
+<nav
+  class="w-full p-4 top-0 fixed z-10 bg-white"
+  transition:name=`navigation`
+  transition:animate="none"
+>
+  <article class="flex justify-between gap-4 m-auto max-w-4xl">
+    <a href="/">
+      <Image
+        src={`/rn-logo.png`}
+        alt="Raquel Navarro product owner navigation logo"
+        width={40}
+        height={40}
+        loading=`eager`
+      /></a
+    >
+    <div>
+      <a href="/use-case/cevinio-supplier">CV</a>
+      <a href="/use-case/holodia-content">Use cases</a>
+    </div>
+  </article>
+</nav>
