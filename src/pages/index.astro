@@ -7,19 +7,22 @@ const useCases = await getCollection("useCases");
 ---
 
 <Layout>
-  <header class="py-24 flex justify-between items-center gap-6">
+  <header
+    class="py-24 px-8 md:px-0 flex justify-center md:justify-between items-center gap-6"
+  >
     <div>
-      <p class="prose-gray font-bold">
+      <span class="text-5xl block md:hidden text-center pb-4">👩&zwj;🚀</span>
+      <p class="prose-gray font-bold text-center md:text-left">
         Hola!, my name is <span class="text-bubble-gum text-xl"
           >Raquel Navarro</span
         > and I am a
       </p>
-      <div class="prose prose-xl py-4">
+      <div class="prose prose-xl py-4 text-center md:text-left">
         <h1>Product Owner</h1>
       </div>
-      <div class="flex gap-4">
-        <span class="text-3xl">👩&zwj;🚀</span>
-        <p class="text-gray-500">
+      <div class="flex gap-4 justify-center md:justify-between">
+        <span class="text-3xl hidden md:block">👩&zwj;🚀</span>
+        <p class="text-gray-500 text-center md:text-left">
           Turning ideas into products that work for everyone. <br /> Listen, plan,
           and guide the flow.
         </p>
@@ -31,7 +34,7 @@ const useCases = await getCollection("useCases");
       height={300}
       alt="Raquel Navarro product owner header"
       loading="eager"
-      class="hidden md:block lg:block rounded-2xl"
+      class="hidden md:block rounded-2xl"
     />
   </header>
   <div class="p-4 w-full flex justify-center">
