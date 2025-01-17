@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import raquel from "../assets/raquel.jpg";
 const useCases = await getCollection("useCases");
 import LetsTalkButton from "../components/letsTalkButton.astro";
+useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 ---
 
 <Layout>
