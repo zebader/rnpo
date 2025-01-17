@@ -1,7 +1,7 @@
 ---
 client: 'Holodia'
 title: 'Content distribution & replayability'
-img: 'holodia-use-case-fitness.jpg'
+img: 'holodia.webp'
 ---
 
 ## My role

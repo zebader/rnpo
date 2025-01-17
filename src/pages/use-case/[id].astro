@@ -16,28 +16,25 @@ export async function getStaticPaths() {
 
 const { useCase } = Astro.props;
 const { data, slug } = useCase;
-const { client, title, img } = data;
+const { title, img } = data;
 
 const { Content } = await render(useCase);
 ---
 
 <Layout title={`${title}`}>
   <div class="flex flex-col items-center mx-auto my-auto prose">
-    <div>
-      <h1 class="text-bubble-gum">
-        {client}
-      </h1>
+    <div class="w-full bg-bubble-gum mb-4 p-4">
+      <Image
+        transition:name={`img-${slug}`}
+        src={`/${img}`}
+        class="w-80"
+        alt={title}
+        width={900}
+        height={900}
+      />
     </div>
-    <Image
-      transition:name={`img-${slug}`}
-      src={`/${img}`}
-      class="w-80"
-      alt={title}
-      width={900}
-      height={900}
-    />
     <div class="w-full">
-      <h1 transition:name={`title-${useCase.slug}`}>
+      <h1>
         {title}
       </h1>
     </div>

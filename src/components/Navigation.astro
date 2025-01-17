@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import LinkedInButton from "./LinkedInButton.astro";
 ---
 
 <nav
@@ -7,7 +8,7 @@ import { Image } from "astro:assets";
   transition:name=`navigation`
   transition:animate="none"
 >
-  <article class="flex justify-between gap-4 m-auto max-w-4xl">
+  <article class="flex justify-between gap-4 m-auto max-w-4xl px-3">
     <a href="/">
       <Image
         src={`/rn-logo.png`}
@@ -17,9 +18,10 @@ import { Image } from "astro:assets";
         loading=`eager`
       /></a
     >
-    <div>
-      <a href="/use-case/cevinio-supplier">CV</a>
-      <a href="/use-case/holodia-content">Use cases</a>
+    <div class="flex gap-6 items-center">
+      <a href="/">Use cases</a>
+      <a href="/about">About</a>
+      <LinkedInButton />
     </div>
   </article>
 </nav>

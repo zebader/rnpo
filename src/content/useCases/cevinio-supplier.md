@@ -1,7 +1,7 @@
 ---
 client: 'Cevinio'
 title: 'Supplier portal'
-img: 'cevinio-supplier.webp'
+img: 'cevinio.webp'
 ---
 
 ## My role

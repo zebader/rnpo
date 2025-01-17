@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import raquel from "../assets/raquel.jpg";
 const useCases = await getCollection("useCases");
+import LetsTalkButton from "../components/letsTalkButton.astro";
 ---
 
 <Layout>
@@ -27,6 +28,9 @@ const useCases = await getCollection("useCases");
           and guide the flow.
         </p>
       </div>
+      <div class="py-4 flex justify-center md:justify-between">
+        <LetsTalkButton />
+      </div>
     </div>
     <Image
       src={raquel}
@@ -37,19 +41,14 @@ const useCases = await getCollection("useCases");
       class="hidden md:block rounded-2xl"
     />
   </header>
-  <div class="p-4 w-full flex justify-center">
-    <span class="radius-lg shadow-lg rounded-2xl p-4 font-bold text-xl"
-      >Use cases</span
-    >
-  </div>
-  <section class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
+  <section class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3">
     {
       useCases.map((useCase) => {
         return (
           <article>
             <a
               href={`/use-case/${useCase.slug}`}
-              class="flex flex-col items-center radius-lg shadow-lg rounded-2xl p-4 "
+              class="flex flex-col items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300"
             >
               <Image
                 transition:name={`img-${useCase.slug}`}
@@ -57,15 +56,32 @@ const useCases = await getCollection("useCases");
                 width={900}
                 height={900}
                 alt={useCase.data.title}
-                class="w-full rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-120 duration-300"
+                class="w-full "
                 loading="eager"
               />
-
-              <span transition:name={`title-${useCase.slug}`} />
             </a>
           </article>
         );
       })
     }
+  </section>
+  <section class="py-24 flex justify-center items-center gap-6">
+    <article class="prose p-4">
+      <blockquote class="flex flex-col items-end gap-4">
+        Raquel leads by example and many people at cevinio find her enthusiasm
+        and dedication both inspiring and motivating. She showed a high level of
+        team player, leadership, problem solving skills and was a valuable
+        contributor to our projects. Eager professional. No matter how complex
+        the problem is, she will always come up with a brilliant, elegant, and
+        cost-effective solution. I certainly would recommend her as product
+        owner.
+        <span class="text-gray-500 text-center md:text-left">
+          - Guillem Blanché, Tech lead at Cevinio
+        </span>
+      </blockquote>
+    </article>
+  </section>
+  <section class="pb-24 flex justify-center items-center gap-6">
+    <LetsTalkButton />
   </section>
 </Layout>
