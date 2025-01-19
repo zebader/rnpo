@@ -1,6 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import LinkedInButton from "./LinkedInButton.astro";
+
+import menuEntries from "../data/menu-entries.json";
+const { useCases, about } = menuEntries;
 ---
 
 <nav
@@ -9,7 +12,7 @@ import LinkedInButton from "./LinkedInButton.astro";
   transition:animate="none"
 >
   <article class="flex justify-between gap-4 m-auto max-w-4xl px-3">
-    <a href="/">
+    <a href={useCases.href}>
       <Image
         src={`/rn-logo.png`}
         alt="Raquel Navarro product owner navigation logo"
@@ -19,8 +22,8 @@ import LinkedInButton from "./LinkedInButton.astro";
       /></a
     >
     <div class="flex gap-6 items-center">
-      <a href="/">Use cases</a>
-      <a href="/about">About</a>
+      <a href={useCases.href}>{useCases.title}</a>
+      <a href={about.href}>{about.title}</a>
       <LinkedInButton />
     </div>
   </article>

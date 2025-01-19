@@ -1,7 +1,34 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Blockquote from "../../components/Blockquote.astro";
+import { Image } from "astro:assets";
+import raquelBio from "../../assets/raquel-bio.jpeg";
+
+import recommendations from "../../data/recommendations.json";
+const filteredRecommendations = recommendations.slice(1);
 ---
 
 <Layout>
-  <div><h1>WIP</h1></div>
+  <section>
+    <div class="max-w-2xl m-auto px-7">
+      <Image
+        src={raquelBio}
+        class="w-full"
+        alt="Raquel bio Nantai"
+        width={900}
+        height={900}
+        loading="eager"
+      />
+    </div>
+  </section>
+  <section class="py-24 flex flex-col justify-center items-center gap-16">
+    {
+      filteredRecommendations?.map((recommendation) => (
+        <Blockquote
+          content={recommendation.content}
+          author={recommendation.author}
+        />
+      ))
+    }
+  </section>
 </Layout>

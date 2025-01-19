@@ -1,0 +1,10 @@
+{
+    "useCases": {
+        "title": "Use cases",
+        "href": "/"
+    },
+    "about": {
+        "title": "About",
+        "href": "/about"
+    }
+}

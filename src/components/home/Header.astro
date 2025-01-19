@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import raquel from "../../assets/raquel.jpeg";
+import LetsTalkButton from "../letsTalkButton.astro";
+import LinkedInButton from "../LinkedInButton.astro";
+
+import headerInfo from "../../data/header-info.json";
+---
+
+<header
+  class="max-w-4xl m-auto py-32 px-8 flex justify-center md:justify-between items-center gap-6"
+>
+  <div>
+    <span class="text-5xl block md:hidden text-center pb-4">👩&zwj;🚀</span>
+    <p
+      class="header-title prose-gray font-bold text-center md:text-left"
+      set:html={headerInfo.introText}
+    />
+    <div class="prose prose-xl py-4 text-center md:text-left">
+      <h1>{headerInfo.title}</h1>
+    </div>
+    <div class="flex gap-4 justify-center md:justify-between">
+      <span class="text-3xl hidden md:block">👩&zwj;🚀</span>
+      <p
+        class="text-gray-500 text-center md:text-left"
+        set:html={headerInfo.caption}
+      />
+    </div>
+    <div class="py-4 flex justify-center md:justify-between">
+      <div class="flex items-center gap-4">
+        <LetsTalkButton />
+        <div>
+          <LinkedInButton />
+        </div>
+      </div>
+    </div>
+  </div>
+  <Image
+    src={raquel}
+    width={300}
+    height={300}
+    alt="Raquel Navarro product owner header"
+    loading="eager"
+    class="hidden md:block rounded-2xl"
+  />
+</header>

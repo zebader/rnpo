@@ -2,46 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import raquel from "../assets/raquel.jpeg";
 const useCases = await getCollection("useCases");
 import LetsTalkButton from "../components/letsTalkButton.astro";
+import Header from "../components/home/Header.astro";
+import Blockquote from "../components/Blockquote.astro";
+
 useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
+import recommendations from "../data/recommendations.json";
 ---
 
 <Layout>
-  <header
-    class="max-w-4xl m-auto py-32 px-8 flex justify-center md:justify-between items-center gap-6"
-  >
-    <div>
-      <span class="text-5xl block md:hidden text-center pb-4">👩&zwj;🚀</span>
-      <p class="prose-gray font-bold text-center md:text-left">
-        Hola!, my name is <span class="text-bubble-gum text-xl"
-          >Raquel Navarro</span
-        > and I am a
-      </p>
-      <div class="prose prose-xl py-4 text-center md:text-left">
-        <h1>Product Owner</h1>
-      </div>
-      <div class="flex gap-4 justify-center md:justify-between">
-        <span class="text-3xl hidden md:block">👩&zwj;🚀</span>
-        <p class="text-gray-500 text-center md:text-left">
-          Turning ideas into products that work for everyone. <br /> Listen, plan,
-          and guide the flow.
-        </p>
-      </div>
-      <div class="py-4 flex justify-center md:justify-between">
-        <LetsTalkButton />
-      </div>
-    </div>
-    <Image
-      src={raquel}
-      width={300}
-      height={300}
-      alt="Raquel Navarro product owner header"
-      loading="eager"
-      class="hidden md:block rounded-2xl"
-    />
-  </header>
+  <Header />
   <section
     class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto"
   >
@@ -69,20 +40,10 @@ useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
     }
   </section>
   <section class="py-24 flex justify-center items-center gap-6">
-    <article class="prose p-4">
-      <blockquote class="flex flex-col items-end gap-4">
-        Raquel leads by example and many people at cevinio find her enthusiasm
-        and dedication both inspiring and motivating. She showed a high level of
-        team player, leadership, problem solving skills and was a valuable
-        contributor to our projects. Eager professional. No matter how complex
-        the problem is, she will always come up with a brilliant, elegant, and
-        cost-effective solution. I certainly would recommend her as product
-        owner.
-        <span class="text-gray-500 text-center md:text-left">
-          - Guillem Blanché, Tech lead at Cevinio
-        </span>
-      </blockquote>
-    </article>
+    <Blockquote
+      content={recommendations?.[0].content}
+      author={recommendations?.[0].author}
+    />
   </section>
   <section class="pb-24 flex justify-center items-center gap-6">
     <LetsTalkButton />
