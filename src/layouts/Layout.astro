@@ -24,7 +24,7 @@ import Navigation from "../components/Navigation.astro";
   </head>
   <body>
     <Navigation />
-    <main class="m-auto max-w-4xl p-3 pt-20">
+    <main class="m-auto pt-20">
       <div>
         <slot />
       </div>
@@ -35,11 +35,5 @@ import Navigation from "../components/Navigation.astro";
 <style>
   html {
     scrollbar-width: none;
-  }
-  main {
-    @apply grid place-content-center;
-  }
-  main > div {
-    @apply container;
   }
 </style>

@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import raquel from "../assets/raquel.jpg";
+import raquel from "../assets/raquel.jpeg";
 const useCases = await getCollection("useCases");
 import LetsTalkButton from "../components/letsTalkButton.astro";
 useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
@@ -10,7 +10,7 @@ useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 
 <Layout>
   <header
-    class="py-24 px-8 md:px-0 flex justify-center md:justify-between items-center gap-6"
+    class="max-w-4xl m-auto py-32 px-8 flex justify-center md:justify-between items-center gap-6"
   >
     <div>
       <span class="text-5xl block md:hidden text-center pb-4">👩&zwj;🚀</span>
@@ -42,14 +42,16 @@ useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
       class="hidden md:block rounded-2xl"
     />
   </header>
-  <section class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3">
+  <section
+    class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto"
+  >
     {
       useCases.map((useCase) => {
         return (
           <article>
             <a
               href={`/use-case/${useCase.slug}`}
-              class="flex flex-col items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300"
+              class="bg-bubble-gum aspect-square flex items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300 p-5"
             >
               <Image
                 transition:name={`img-${useCase.slug}`}
