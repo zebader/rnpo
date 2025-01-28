@@ -6,6 +6,7 @@ const useCases = await getCollection("useCases");
 import LetsTalkButton from "../components/letsTalkButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
+import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
 
 useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 import recommendations from "../data/recommendations.json";
@@ -41,8 +42,9 @@ import recommendations from "../data/recommendations.json";
   </section>
   <section class="py-24 flex justify-center items-center gap-6">
     <Blockquote
-      content={recommendations?.[0].content}
-      author={recommendations?.[0].author}
+      content={recommendations[0].content}
+      author={recommendations[0].author}
+      image={recommendationsImages[recommendations[0].imageId]}
     />
   </section>
   <section class="pb-24 flex justify-center items-center gap-6">

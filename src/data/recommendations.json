@@ -1,14 +1,17 @@
 [
-    {
-        "content":"Raquel leads by example and many people at cevinio find her enthusiasm and dedication both inspiring and motivating. She showed a high level of team player, leadership, problem solving skills and was a valuable contributor to our projects. Eager professional. No matter how complex the problem is, she will always come up with a brilliant, elegant, and cost-effective solution. I certainly would recommend her as product owner.",
-        "author":"Guillem Blanché, Tech lead at Cevinio"
-    },
-    {
-        "content": "I have had the privilege and the pleasure of working with Raquel for almost 3 years in Mad Collective. In her role, she has always demonstrated great engagement and professionality. She is the kind of person that naturally helps to build a team around her and get the work done, while keeping morale high thanks to her contagious positivity. She has the right attitude and capability to achieve whatever she is set to achieve.",
-        "author": "Bernat Segura, Senior Software engineer at Mad Collective"
-    },
-    {
-        "content":"I have gotten to work with Raquel for over a year now and she has proved to be one of the most dedicated professionals I have ever met. When you really get to connect with her, you'll find a fantastic person complemented with an outstanding skillset. She has an easiness to build interpersonal relations with others and showed to be result driven, experienced and efficient team player. Raquel worked far beyond the call of duty, she is an asset to any company.",
-        "author":"Daniel Martinez Moreno, Project Manager at Cevinio."
-    }
+  {
+    "content": "Raquel leads by example and many people at cevinio find her enthusiasm and dedication both inspiring and motivating. She showed a high level of team player, leadership, problem solving skills and was a valuable contributor to our projects. Eager professional. No matter how complex the problem is, she will always come up with a brilliant, elegant, and cost-effective solution. I certainly would recommend her as product owner.",
+    "author": "Guillem Blanché, Tech lead at Cevinio",
+    "imageId": "guillem"
+  },
+  {
+    "content": "I have had the privilege and the pleasure of working with Raquel for almost 3 years in Mad Collective. In her role, she has always demonstrated great engagement and professionality. She is the kind of person that naturally helps to build a team around her and get the work done, while keeping morale high thanks to her contagious positivity. She has the right attitude and capability to achieve whatever she is set to achieve.",
+    "author": "Bernat Segura, Senior Software engineer at Mad Collective",
+    "imageId": "bernat"
+  },
+  {
+    "content": "I have gotten to work with Raquel for over a year now and she has proved to be one of the most dedicated professionals I have ever met. When you really get to connect with her, you'll find a fantastic person complemented with an outstanding skillset. She has an easiness to build interpersonal relations with others and showed to be result driven, experienced and efficient team player. Raquel worked far beyond the call of duty, she is an asset to any company.",
+    "author": "Daniel Martinez Moreno, Project Manager at Cevinio.",
+    "imageId": "daniel"
+  }
 ]

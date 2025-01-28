@@ -1,0 +1,24 @@
+{
+  "texts": {
+    "title": "Hi, I’m Raquel – ",
+    "introText": "a product enthusiast specializing in thoughtful, people-focused design. I’m passionate about creating experiences that connect, inspire, and bring joy. Whether it’s crafting a physical product out of clay or shaping digital experiences, I bring curiosity and care to everything I do.",
+    "travelingText": "Traveling is my favorite way to shake up my perspective. Every trip I make reminds me how wildly different (and amazing) the world can be.",
+    "potteryText": "When I’m home I love doing pottery, which helps me reconnect with the core of product design. It’s just me and the clay, no meetings, no Jira tasks – just the quiet satisfaction of creating something tangible and meaningful. My latest project? A dog bowl designed to help my anxious pup eat at ease – because even pottery can have a little product management sprinkled in.",
+    "comedyText": "And then there’s stand-up comedy, my wildcard passion. I love making people laugh, but beyond that, it’s all about connection. Every set is a live experiment in understanding how people think, what makes them tick, and what brings them joy. Comedy has taught me to think on my feet, embrace vulnerability, and enjoy the storytelling journey.",
+    "conclusionText": "Whether it’s pottery, traveling, or making people laugh, I’m all about connecting with others and learning what makes them tick. Thanks for stopping by – I’d love to hear what you’re passionate about, too!"
+  },
+  "funFacts": [
+    {
+      "text": "I’m almost as tall as a tuna",
+      "imageId": "tuna"
+    },
+    {
+      "text": "Once in Colombia, I got so excited about kayaking around our island that, I ended up three islands away and almost couldn't make it back.",
+      "imageId": "colombia"
+    },
+    {
+      "text": "When I was living in the dangerous part of Barcelona I taught my dog how to bark on command to feel safer. This fact is fun because look at my dog:",
+      "imageId": "dog"
+    }
+  ]
+}
