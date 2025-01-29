@@ -13,12 +13,14 @@ const { texts,funFacts } = aboutContent;
 ---
 
 <Layout>
-  <section class="max-w-2xl m-auto px-7 prose">
-    <h2 class="text-3xl font-bold">{texts.title} 👩&zwj;🚀</h2>
-    <p>{texts.introText}</p>
-    <p>{texts.travelingText}</p>
+  <section class="max-w-screen-2xl m-auto px-7 prose">
+    <div class="max-w-2xl m-auto">
+      <h2 class="text-3xl font-bold">{texts.title} 👩&zwj;🚀</h2>
+      <p>{texts.introText}</p>
+      <p>{texts.travelingText}</p>
+    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-8">
       <video no-controls autoplay loop muted class="rounded-2xl not-prose">
         <source src="/raquel_tokyo.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -37,26 +39,32 @@ const { texts,funFacts } = aboutContent;
       </video>
     </div>
 
-    <p>{texts.potteryText}</p>
-    <video no-controls autoplay loop muted class="w-full rounded-2xl">
-      <source src="/raquel_pottery.mov" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p>{texts.comedyText}</p>
-    <p>{texts.conclusionText}</p>
+    <div class="max-w-2xl m-auto">
+      <p>{texts.potteryText}</p>
+      <video no-controls autoplay loop muted class="w-full rounded-2xl my-16">
+        <source src="/raquel_pottery.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>{texts.comedyText}</p>
+      <p>{texts.conclusionText}</p>
+    </div>
   </section>
-  <section class="max-w-2xl m-auto px-7 py-24 flex flex-col justify-center items-center gap-16">
-    <h2 class="text-3xl font-bold self-start">What they say</h2>
-    {
-      filteredRecommendations?.map((recommendation) => (
-        <Blockquote
-          content={recommendation.content}
-          author={recommendation.author}
-          image={recommendationsImages[recommendation.imageIds]}
-        />
-      ))
-    }
+  <section class="max-w-screen-2xl m-auto px-7 prose">
+    <div class="max-w-2xl m-auto flex flex-col justify-center items-center gap-16">
+      <h2 class="text-3xl font-bold self-start">What they say</h2>
+      {
+        filteredRecommendations?.map((recommendation) => (
+          <Blockquote
+            content={recommendation.content}
+            author={recommendation.author}
+            image={recommendationsImages[recommendation.imageId]}
+          />
+        ))
+      }
+    </div>
+
   </section>
+  
   <section class="py-24 flex flex-col justify-center items-center gap-16 max-w-2xl m-auto px-7 prose">
     {
       funFacts.map((content,index) => (
