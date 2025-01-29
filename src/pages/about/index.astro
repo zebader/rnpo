@@ -15,36 +15,39 @@ const { texts,funFacts } = aboutContent;
 <Layout>
   <section class="max-w-screen-2xl m-auto px-7 prose">
     <div class="max-w-2xl m-auto">
-      <h2 class="text-3xl font-bold">{texts.title} 👩&zwj;🚀</h2>
+      <h2 class="text-3xl font-bold">{texts.introTitle} 👩&zwj;🚀</h2>
       <p>{texts.introText}</p>
       <p>{texts.travelingText}</p>
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-8">
-      <video no-controls autoplay loop muted class="rounded-2xl not-prose">
+      <video no-controls autoplay loop muted class="rounded-2xl not-prose bg-stone-100">
         <source src="/raquel_tokyo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <video no-controls autoplay loop muted class="rounded-2xl not-prose">
+      <video no-controls autoplay loop muted class="rounded-2xl not-prose bg-stone-100">
         <source src="/raquel_nikko.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <video no-controls autoplay loop muted class="rounded-2xl not-prose">
+      <video no-controls autoplay loop muted class="rounded-2xl not-prose bg-stone-100">
         <source src="/raquel_colombia.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <video no-controls autoplay loop muted class="rounded-2xl not-prose">
+      <video no-controls autoplay loop muted class="rounded-2xl not-prose bg-stone-100">
         <source src="/raquel_canarias.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="max-w-2xl m-auto">
-      <p>{texts.potteryText}</p>
-      <video no-controls autoplay loop muted class="w-full rounded-2xl my-16">
-        <source src="/raquel_pottery.mov" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <h2 class="text-3xl font-bold">{texts.potteryTitle} 🍶 🎤</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+        <p>{texts.potteryText}</p>
+        <video no-controls autoplay loop muted class="w-full rounded-2xl">
+          <source src="/raquel_pottery.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <p>{texts.comedyText}</p>
       <p>{texts.conclusionText}</p>
     </div>
