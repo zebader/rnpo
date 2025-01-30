@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 const useCases = await getCollection("useCases");
-import LetsTalkButton from "../components/LetsTalkButton.astro";
+import LetsTalkMailButton from "../components/LetsTalkMailButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
 import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
@@ -49,6 +49,6 @@ import recommendations from "../data/recommendations.json";
     />
   </section>
   <section class="pb-24 flex justify-center items-center gap-6">
-    <LetsTalkButton />
+    <LetsTalkMailButton />
   </section>
 </Layout>
