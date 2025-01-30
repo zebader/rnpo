@@ -1,10 +1,14 @@
 {
-    "useCases": {
-        "title": "Use cases",
-        "href": "/"
-    },
-    "about": {
-        "title": "About",
-        "href": "/about"
-    }
+  "home": {
+    "title": "",
+    "href": "/"
+  },
+  "useCases": {
+    "title": "Use cases",
+    "href": "/#use-cases"
+  },
+  "about": {
+    "title": "About",
+    "href": "/about"
+  }
 }

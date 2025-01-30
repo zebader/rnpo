@@ -1,0 +1,29 @@
+---
+import LinkedInButton from "./LinkedInButton.astro";
+---
+
+<nav
+  class="w-full p-4 bottom-0 fixed z-10 bg-white"
+  transition:name=`navigation`
+  transition:animate="none"
+>
+  <article class="flex justify-between gap-4 m-auto max-w-4xl px-3 items-center">
+    <div class="translate-y-1">
+      <h2 class="text-3xl font-bold animate-bounce">Contact me! </h2>
+    </div>
+    <div class="grow flex items-center">
+      <hr class="grow border-b-1 border-bubble-gum" />
+      <div class="rounded-full bg-bubble-gum w-2 h-2"></div>
+
+    </div>
+    <div class="flex gap-6 items-center">
+      <div>
+        <a class="flex gap-3 items-center justify-center" href="mailto:hello@raqueln.com">
+          <span class="text-xl">✉️</span>
+          <span class="text-bubble-gum hidden md:block">hello@raqueln.com</span>
+        </a>
+      </div>
+      <LinkedInButton />
+    </div>
+  </article>
+</nav>

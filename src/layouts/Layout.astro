@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import Navigation from "../components/Navigation.astro";
+import ContactBar from "../components/ContactBar.astro";
 ---
 
 <!doctype html>
@@ -24,11 +25,12 @@ import Navigation from "../components/Navigation.astro";
   </head>
   <body>
     <Navigation />
-    <main class="m-auto pt-20">
+    <main class="m-auto py-20">
       <div>
         <slot />
       </div>
     </main>
+    <ContactBar />
   </body>
 </html>
 

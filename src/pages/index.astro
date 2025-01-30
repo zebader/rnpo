@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 const useCases = await getCollection("useCases");
-import LetsTalkButton from "../components/letsTalkButton.astro";
+import LetsTalkButton from "../components/LetsTalkButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
 import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
@@ -15,7 +15,8 @@ import recommendations from "../data/recommendations.json";
 <Layout>
   <Header />
   <section
-    class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto"
+    class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto scroll-m-20"
+    id="use-cases"
   >
     {
       useCases.map((useCase) => {
