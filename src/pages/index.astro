@@ -7,7 +7,7 @@ import LetsTalkMailButton from "../components/LetsTalkMailButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
 import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
-
+import { fade } from "astro:transitions";
 useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 import recommendations from "../data/recommendations.json";
 ---
@@ -28,6 +28,7 @@ import recommendations from "../data/recommendations.json";
             >
               <Image
                 transition:name={`img-${useCase.slug}`}
+                transition:animate="none"
                 src={`/${useCase.data.img}`}
                 width={900}
                 height={900}
