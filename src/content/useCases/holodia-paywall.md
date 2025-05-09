@@ -1,12 +1,12 @@
 ---
-client: 'Holodia'
-title: 'New paywall & onboarding design'
-img: 'holofit_white.webp'
+client: "Holodia"
+title: "New paywall & onboarding design"
+img: "holofit_white.webp"
 ---
 
 ## My role
 
-As the sole Product Owner at Holodia, I worked with our multidisciplinary team and our founders to set the product strategy and design the roadmap. **I conducted user research, user interviews, designed a new onboarding experience, designed a new AR experience from scratch, and worked closely with the CEO, the COO, and the lead engineer.**
+As the sole Product Manager at Holodia, I worked with our multidisciplinary team and our founders to set the product strategy and design the roadmap. **I conducted user research, user interviews, designed a new onboarding experience, designed a new AR experience from scratch, and worked closely with the CEO, the COO, and the lead engineer.**
 
 ## Product
 

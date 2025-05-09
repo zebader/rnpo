@@ -1,1 +1,1 @@
-# Raquel Navarro Product owner portfolio
+# Raquel Navarro Product Manager portfolio
