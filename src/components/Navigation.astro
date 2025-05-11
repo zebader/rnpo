@@ -4,28 +4,115 @@ import LinkedInButton from "./LinkedInButton.astro";
 
 import menuEntries from "../data/menu-entries.json";
 const { home,useCases, about, recommendations } = menuEntries;
----
 
+---
+<style >
+  @tailwind utilities;
+  @layer utilities {
+    .hamburger-toggle {
+      @apply [&>div]:h-0 [&>div]:bg-white [&>div]:before:translate-y-0 [&>div]:before:rotate-45 [&>div]:after:translate-y-0 [&>div]:after:-rotate-45;
+    }
+  }
+</style>
 <nav
-  class="w-full p-4 top-0 fixed z-10 bg-white"
+  class="w-full p-4 top-0 fixed z-20 bg-white"
   transition:name=`navigation`
   transition:animate="none"
 >
-  <article class="flex justify-between gap-4 m-auto max-w-4xl px-3">
-    <a href={home.href} class="flex gap-3 items-center">
-      <Image
-        src={`/rn-logo.png`}
-        alt="Raquel Navarro product manager navigation logo"
-        width={40}
-        height={40}
-        loading=`eager`
-      /><span class="font-bold hidden md:block">Product Manager</span></a
-    >
+  <article class="flex justify-between gap-4 m-auto max-w-3xl px-3">
+    <a data-link href={home.href} class="flex gap-3 items-center">
+      
+        <Image
+          src={`/rn-logo.png`}
+          alt="Raquel Navarro product manager navigation logo"
+          width={40}
+          height={40}
+          loading=`eager`
+        /><span class="font-bold hidden md:block">Product Manager</span>
+      
+    </a>
     <div class="flex gap-6 items-center">
-      <a href={useCases.href}>{useCases.title}</a>
-      <a href={about.href}>{about.title}</a>
-      <a href={recommendations.href}>{recommendations.title}</a>
+      <div class="gap-6 items-center hidden md:flex">
+        <a href={useCases.href}>{useCases.title}</a>
+        <a href={about.href}>{about.title}</a>
+        <a href={recommendations.href}>{recommendations.title}</a>
+      </div>
+
       <LinkedInButton />
+      <div class="md:hidden flex">
+        <div
+          data-burger
+          class="grid place-content-center w-10 h-0.50 mx-auto p-2"
+        >
+        <div
+          class="w-3 h-0.5 bg-black rounded-full transition-all duration-150 before:content-[''] before:absolute before:w-3 before:h-0.5 before:bg-black before:rounded-full before:-translate-y-1 before:transition-all before:duration-150 after:content-[''] after:absolute after:w-3 after:h-0.5 after:bg-black after:rounded-full after:translate-y-1 after:transition-all after:duration-150"
+        ></div>
+      </div>
+    </div>
     </div>
   </article>
 </nav>
+
+<section data-drawer class="md:hidden bg-white w-full h-screen fixed top-0 left-0 z-10 items-center justify-center opacity-90">
+  <div class="gap-6 flex-col items-center justify-center flex">
+    <a data-link href={useCases.href}>{useCases.title}</a>
+    <a data-link href={about.href}>{about.title}</a>
+    <a data-link href={recommendations.href}>{recommendations.title}</a>
+  </div>
+</section>
+
+<script is:inline>
+  const startNavigation = () => {
+    const burger = document.querySelector("[data-burger]");
+    const drawer = document.querySelector("[data-drawer]");
+    const links = document.querySelectorAll("[data-link]");
+    const img = document.querySelector("[data-image]");
+    let isDrawerOpen = false;
+
+    const toggleDrawer = () => {
+      isDrawerOpen = !isDrawerOpen;
+    }
+    const resetNavigation = () => {
+      isDrawerOpen = false;
+      burger.classList.remove('hamburger-toggle');
+      drawer.classList.remove("flex");
+      drawer.classList.add("hidden");
+    };
+    resetNavigation()
+    
+    const openDrawer = () => {
+      burger.classList.toggle('hamburger-toggle');
+      toggleDrawer()
+      if (isDrawerOpen) {
+        drawer.classList.remove("hidden");
+        drawer.classList.add("flex");
+      } else {
+        drawer.classList.remove("flex");
+        drawer.classList.add("hidden");
+      }
+    }
+    const startEvents = () => {
+      links.forEach(link => link.addEventListener("click", (e) => {
+        if(!e.currentTarget.href || e.currentTarget.href === window.location.href) e.preventDefault();
+        resetNavigation()
+      }
+    ));
+      burger.addEventListener("click", openDrawer);
+    }
+
+    return {startEvents}
+
+  }
+  const {startEvents} = startNavigation()
+  startEvents()
+
+  navigation.addEventListener("navigate", (e) => {
+    if(e.destination.url === window.location.href) {
+      return;
+    }
+    const {startEvents} = startNavigation()
+    startEvents()
+  })
+
+
+</script>
