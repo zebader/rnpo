@@ -2,17 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-const useCases = await getCollection("useCases");
 import LetsTalkMailButton from "../components/LetsTalkMailButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
 import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
-useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 import recommendations from "../data/recommendations.json";
 import {getRandomInt} from "../utils/getRandomInt";
 
-const {content, author} = recommendations[getRandomInt( recommendations.length )];
-const recommendationImage = recommendationsImages[recommendations[getRandomInt( recommendations.length )].imageId as RecommendationsImagesId];
+const useCases = await getCollection("useCases");
+useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
+const index = getRandomInt( recommendations.length )
+const {content, author} = recommendations[index];
+const recommendationImage = recommendationsImages[recommendations[index].imageId as RecommendationsImagesId];
 ---
 
 <Layout>
