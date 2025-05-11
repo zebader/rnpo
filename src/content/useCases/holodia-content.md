@@ -1,7 +1,9 @@
 ---
-client: 'Holodia'
-title: 'Content distribution & replayability'
-img: 'holodia_white.webp'
+client: "Holodia"
+title: "Content distribution & replayability"
+img: "holodia_white.webp"
+id: "holodia"
+bg: "holodia-content-distribution.webp"
 ---
 
 ## My role

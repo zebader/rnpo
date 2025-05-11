@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import LinkedInButton from "./LinkedInButton.astro";
 
 import menuEntries from "../data/menu-entries.json";
-const { home,useCases, about } = menuEntries;
+const { home,useCases, about, recommendations } = menuEntries;
 ---
 
 <nav
@@ -24,6 +24,7 @@ const { home,useCases, about } = menuEntries;
     <div class="flex gap-6 items-center">
       <a href={useCases.href}>{useCases.title}</a>
       <a href={about.href}>{about.title}</a>
+      <a href={recommendations.href}>{recommendations.title}</a>
       <LinkedInButton />
     </div>
   </article>

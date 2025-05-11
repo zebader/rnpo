@@ -7,9 +7,12 @@ import LetsTalkMailButton from "../components/LetsTalkMailButton.astro";
 import Header from "../components/home/Header.astro";
 import Blockquote from "../components/Blockquote.astro";
 import { recommendationsImages,RecommendationsImagesId } from '../utils/recommendationsImages'
-import { fade } from "astro:transitions";
 useCases?.sort((a, b) => b.data.client.localeCompare(a.data.client));
 import recommendations from "../data/recommendations.json";
+import {getRandomInt} from "../utils/getRandomInt";
+
+const {content, author} = recommendations[getRandomInt( recommendations.length )];
+const recommendationImage = recommendationsImages[recommendations[getRandomInt( recommendations.length )].imageId as RecommendationsImagesId];
 ---
 
 <Layout>
@@ -24,12 +27,12 @@ import recommendations from "../data/recommendations.json";
           <article>
             <a
               href={`/use-case/${useCase.slug}`}
-              class="bg-bubble-gum aspect-square flex items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300 p-5"
+              class="bg-bubble-gum aspect-square flex items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300"
             >
               <Image
                 transition:name={`img-${useCase.slug}`}
                 transition:animate="none"
-                src={`/${useCase.data.img}`}
+                src={`/${useCase.data.bg}`}
                 width={900}
                 height={900}
                 alt={useCase.data.title}
@@ -44,9 +47,9 @@ import recommendations from "../data/recommendations.json";
   </section>
   <section class="py-24 flex justify-center items-center gap-6">
     <Blockquote
-      content={recommendations[0].content}
-      author={recommendations[0].author}
-      image={recommendationsImages[recommendations[0].imageId]}
+      content={content}
+      author={author}
+      image={recommendationImage}
     />
   </section>
   <section class="pb-24 flex justify-center items-center gap-6">

@@ -10,5 +10,9 @@
   "about": {
     "title": "About",
     "href": "/about"
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "href": "/recommendations"
   }
 }

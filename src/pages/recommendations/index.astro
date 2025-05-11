@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Blockquote from "../../components/Blockquote.astro";
+import { recommendationsImages, RecommendationsImagesId } from '../../utils/recommendationsImages'
+
+import recommendations from "../../data/recommendations.json";
+
+---
+
+<Layout>
+  <section class="max-w-screen-2xl m-auto px-7 prose">
+    <div class="max-w-2xl m-auto flex flex-col justify-center items-center gap-16">
+      <h2 class="text-3xl font-bold self-start">What they say</h2>
+      {
+        recommendations?.map((recommendation) => (
+          <Blockquote
+            content={recommendation.content}
+            author={recommendation.author}
+            image={recommendationsImages[recommendation.imageId as RecommendationsImagesId]}
+          />
+        ))
+      }
+    </div>
+
+  </section>
+</Layout>

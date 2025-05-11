@@ -1,26 +1,28 @@
 ---
-client: 'Cevinio'
-title: 'Supplier portal'
-img: 'cevinio_white.webp'
+client: "Cevinio"
+title: "Supplier portal"
+img: "cevinio_white.webp"
+id: "cevinio"
+bg: "cevinio-supplier-portal.webp"
 ---
 
 ## My role
 
- As the Product Owner at Cevinio, a B2B company, I worked with our multidisciplinary team to design and launch a new supplier portal.**My responsibilities included conducting user research, managing stakeholders, and defining the functional requirements for the portal.** I collaborated closely with developers, UX designers, and external partners to create a solution that bridged the gap between companies, suppliers, and accounts payable (AP) agents.
+As the Product Owner at Cevinio, a B2B company, I worked with our multidisciplinary team to design and launch a new supplier portal.**My responsibilities included conducting user research, managing stakeholders, and defining the functional requirements for the portal.** I collaborated closely with developers, UX designers, and external partners to create a solution that bridged the gap between companies, suppliers, and accounts payable (AP) agents.
 
 ## Product
 
- Cevinio **streamlines invoice processing by providing a unified platform for companies and suppliers.**
+Cevinio **streamlines invoice processing by providing a unified platform for companies and suppliers.**
 
- For companies, Cevinio **automates high-volume invoice workflows—capturing,** validating, and routing invoices for approval—ensuring compliance and accuracy while saving time.
+For companies, Cevinio **automates high-volume invoice workflows—capturing,** validating, and routing invoices for approval—ensuring compliance and accuracy while saving time.
 
- For suppliers, the **dedicated portal accelerates payment cycles, provides real-time visibility into invoice statuses,** and facilitates direct communication with AP agents.
+For suppliers, the **dedicated portal accelerates payment cycles, provides real-time visibility into invoice statuses,** and facilitates direct communication with AP agents.
 
- This seamless invoicing experience eliminates delays, fosters transparency, and creates value for all stakeholders.
+This seamless invoicing experience eliminates delays, fosters transparency, and creates value for all stakeholders.
 
 ## Problem definition
 
- Before the supplier portal, **suppliers had no clear visibility into the status of their invoices** or any existing issues, such as missing information or unclear due dates. Communication between suppliers and AP agents was inefficient, often hindered by time zone differences and the fact that AP agents were frequently external contractors.
+Before the supplier portal, **suppliers had no clear visibility into the status of their invoices** or any existing issues, such as missing information or unclear due dates. Communication between suppliers and AP agents was inefficient, often hindered by time zone differences and the fact that AP agents were frequently external contractors.
 
 Suppliers lacked:
 

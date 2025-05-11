@@ -2,6 +2,8 @@
 client: "Holodia"
 title: "New paywall & onboarding design"
 img: "holofit_white.webp"
+id: "holofit"
+bg: "holodia-paywall-digital-environment-scene.webp"
 ---
 
 ## My role

@@ -1,9 +1,14 @@
 ---
 import { Image } from "astro:assets";
+interface Props {
+  content: string; 
+  author: string;
+  image?: ImageMetadata;
+}
 const { content, author, image } = Astro.props;
 ---
 <article class="prose p-4">
-  <blockquote class="flex flex-col items-end gap-4">
+  <blockquote class="flex flex-col items-start gap-4">
     {content}
     <span class="text-gray-500 text-left flex justify-center items-center gap-4">
       {image && <Image

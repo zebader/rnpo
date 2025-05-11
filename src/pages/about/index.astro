@@ -1,14 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Blockquote from "../../components/Blockquote.astro";
 import { Image } from "astro:assets";
 import { funFactsImages,FunFactsImagesId } from '../../utils/funFactsImages'
-import { recommendationsImages,RecommendationsImagesId } from '../../utils/recommendationsImages'
 
-import recommendations from "../../data/recommendations.json";
 import aboutContent from "../../data/about.json";
 
-const filteredRecommendations = recommendations.slice(1);
 const { texts,funFacts } = aboutContent;
 ---
 
@@ -56,21 +52,6 @@ const { texts,funFacts } = aboutContent;
       <p>{texts.conclusionText}</p>
     </div>
   </section>
-  <section class="max-w-screen-2xl m-auto px-7 prose">
-    <div class="max-w-2xl m-auto flex flex-col justify-center items-center gap-16">
-      <h2 class="text-3xl font-bold self-start">What they say</h2>
-      {
-        filteredRecommendations?.map((recommendation) => (
-          <Blockquote
-            content={recommendation.content}
-            author={recommendation.author}
-            image={recommendationsImages[recommendation.imageId]}
-          />
-        ))
-      }
-    </div>
-
-  </section>
   
   <section class="py-24 flex flex-col justify-center items-center gap-16 max-w-2xl m-auto px-7 prose">
     {
@@ -78,7 +59,7 @@ const { texts,funFacts } = aboutContent;
         <h2 class="text-3xl font-bold text-center">{`Fun Fact #${index + 1}`}</h2>
         <p class="text-center">{content.text}</p>
         <Image
-        src={funFactsImages[content.imageId]}
+        src={funFactsImages[content.imageId as FunFactsImagesId]}
         class="rounded-2xl w-full"
         alt={`Raquel fun fact ${content.imageId}`}
         width={900}
