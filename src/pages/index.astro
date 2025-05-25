@@ -28,16 +28,23 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
           <article>
             <a
               href={`/use-case/${useCase.slug}`}
-              class="bg-bubble-gum aspect-square flex items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300"
+              class="relative bg-bubble-gum aspect-square flex items-center shadow-sm transition ease-in-out hover:-translate-y-2 hover:scale-120 hover:shadow-lg duration-300"
             >
               <Image
-                transition:name={`img-${useCase.slug}`}
-                transition:animate="none"
+
+                src={`/${useCase.data.img}`}
+                width={900}
+                height={900}
+                alt={useCase.data.title + " - " + useCase.data.client}
+                class="w-full p-20 absolute"
+                loading="eager"
+              />
+              <Image
                 src={`/${useCase.data.bg}`}
                 width={900}
                 height={900}
                 alt={useCase.data.title}
-                class="w-full "
+                class="w-full use-case-image absolute z-0"
                 loading="eager"
               />
             </a>
@@ -57,3 +64,40 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
     <LetsTalkMailButton />
   </section>
 </Layout>
+
+<script is:inline>
+  (function() {
+    let useCaseImages = document.querySelectorAll(".use-case-image")
+
+    const getImagesInitialHeight = () => {
+      return Array.from(useCaseImages).map((img) => {
+        const rect = img.getBoundingClientRect();
+        return rect.top -  ((window.innerHeight - rect.height) / 2);
+      });
+    }
+    let initalImagesHeight = [];
+    const setInitialImagesHeight = () => {
+      initalImagesHeight = getImagesInitialHeight()
+    }
+
+    setInitialImagesHeight()
+
+    const handleScroll = () => {
+      useCaseImages.forEach((img, i) => {
+        const rect = img.getBoundingClientRect();
+        const percentageToCenter = (Number(((rect.top -  ((window.innerHeight - rect.height) / 2)) / initalImagesHeight[i]) * 100).toFixed(0))
+        const clampedPercentage = Math.max(0, Math.min(100, percentageToCenter));
+        const opacityValue = (clampedPercentage / 100);
+        
+        img.style.opacity = opacityValue < 0.15 ? 0.15 : opacityValue;
+      });
+    }
+
+    window.addEventListener("resize", setInitialImagesHeight)
+
+    document.addEventListener("scroll", handleScroll)
+
+  })();
+
+
+</script>
