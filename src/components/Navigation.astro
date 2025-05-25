@@ -14,13 +14,9 @@ const { home,useCases, about, recommendations } = menuEntries;
     }
   }
 </style>
-<nav
-  class="w-full p-4 top-0 fixed z-20 bg-white"
-
->
+<nav class="w-full p-4 top-0 fixed z-20 bg-white">
   <article class="flex justify-between gap-4 m-auto max-w-3xl px-3">
     <a data-link href={home.href} class="flex gap-3 items-center">
-      
         <Image
           src={`/rn-logo.png`}
           alt="Raquel Navarro product manager navigation logo"
@@ -28,13 +24,12 @@ const { home,useCases, about, recommendations } = menuEntries;
           height={40}
           loading=`eager`
         /><span class="font-bold hidden md:block">Product Manager</span>
-      
     </a>
     <div class="flex gap-6 items-center">
       <div class="gap-6 items-center hidden md:flex">
         <a href={useCases.href}>{useCases.title}</a>
-        <a data-astro-reload href={about.href}>{about.title}</a>
-        <a data-astro-reload href={recommendations.href}>{recommendations.title}</a>
+        <a href={about.href}>{about.title}</a>
+        <a href={recommendations.href}>{recommendations.title}</a>
       </div>
 
       <LinkedInButton />
@@ -55,8 +50,8 @@ const { home,useCases, about, recommendations } = menuEntries;
 <section data-drawer class="md:hidden bg-white w-full h-screen fixed top-0 left-0 z-10 items-center justify-center opacity-90">
   <div class="gap-6 flex-col items-center justify-center flex">
     <a data-link href={useCases.href}>{useCases.title}</a>
-    <a data-astro-reload data-link href={about.href}>{about.title}</a>
-    <a data-astro-reload data-link href={recommendations.href}>{recommendations.title}</a>
+    <a data-link href={about.href}>{about.title}</a>
+    <a data-link href={recommendations.href}>{recommendations.title}</a>
   </div>
 </section>
 
@@ -100,9 +95,7 @@ const { home,useCases, about, recommendations } = menuEntries;
     burger.addEventListener("click", openDrawer);
   }
 
-  document.addEventListener("astro:after-swap", (e) => {
-    startNavigation()
-  })
+  document.addEventListener("astro:after-swap", startNavigation)
 
   startNavigation()
   

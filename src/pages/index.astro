@@ -19,7 +19,7 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
 <Layout>
   <Header />
   <section
-    class="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto scroll-m-20"
+    class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 max-w-screen-2xl m-auto scroll-m-20"
     id="use-cases"
   >
     {
@@ -44,7 +44,7 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
                 width={900}
                 height={900}
                 alt={useCase.data.title}
-                class="w-full use-case-image absolute z-0"
+                class="w-full use-case-image absolute z-0" 
                 loading="eager"
               />
             </a>
@@ -67,37 +67,24 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
 
 <script is:inline>
   (function() {
-    let useCaseImages = document.querySelectorAll(".use-case-image")
+    const init = () => {
+      let useCaseImages = document.querySelectorAll(".use-case-image")
 
-    const getImagesInitialHeight = () => {
-      return Array.from(useCaseImages).map((img) => {
-        const rect = img.getBoundingClientRect();
-        return rect.top -  ((window.innerHeight - rect.height) / 2);
-      });
-    }
-    let initalImagesHeight = [];
-    const setInitialImagesHeight = () => {
-      initalImagesHeight = getImagesInitialHeight()
-    }
+      const handleScroll = () => {
+        useCaseImages.forEach((img, i) => {
+          const rect = img.getBoundingClientRect();
+          const percentageToCenter = 135 - Number(((window.scrollY / rect.height ) * 100).toFixed(0));
+          const clampedPercentage = Math.max(0, Math.min(100, percentageToCenter));
+          const opacityValue = (clampedPercentage / 100);
+          
+          img.style.opacity = opacityValue < 0.20 ? 0.20 : opacityValue;
+        });
+      }
 
-    setInitialImagesHeight()
-
-    const handleScroll = () => {
-      useCaseImages.forEach((img, i) => {
-        const rect = img.getBoundingClientRect();
-        const percentageToCenter = (Number(((rect.top -  ((window.innerHeight - rect.height) / 2)) / initalImagesHeight[i]) * 100).toFixed(0))
-        const clampedPercentage = Math.max(0, Math.min(100, percentageToCenter));
-        const opacityValue = (clampedPercentage / 100);
-        
-        img.style.opacity = opacityValue < 0.15 ? 0.15 : opacityValue;
-      });
+      document.addEventListener("scroll", handleScroll)
     }
 
-    window.addEventListener("resize", setInitialImagesHeight)
-
-    document.addEventListener("scroll", handleScroll)
-
+    init();
+    document.addEventListener("astro:after-swap", init)
   })();
-
-
 </script>
