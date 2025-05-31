@@ -78,6 +78,7 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
           const opacityValue = (clampedPercentage / 100);
           
           img.style.opacity = opacityValue < 0.20 ? 0.20 : opacityValue;
+          img.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, ${100 - clampedPercentage}% ${clampedPercentage}%)`;
         });
       }
 
