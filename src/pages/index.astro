@@ -71,12 +71,12 @@ const recommendationImage = recommendationsImages[recommendations[index].imageId
       let useCaseImages = document.querySelectorAll(".use-case-image")
 
       const handleScroll = () => {
-        useCaseImages.forEach((img, i) => {
+        useCaseImages.forEach((img) => {
           const rect = img.getBoundingClientRect();
-          const percentageToCenter = 135 - Number(((window.scrollY / rect.height ) * 100).toFixed(0));
+          const percentageToCenter = Number((rect.top /rect.height) * 100).toFixed(0);
           const clampedPercentage = Math.max(0, Math.min(100, percentageToCenter));
           const opacityValue = (clampedPercentage / 100);
-          
+
           img.style.opacity = opacityValue < 0.20 ? 0.20 : opacityValue;
           img.style.clipPath = `polygon(0 0, 100% 0, 100% 100%, ${100 - clampedPercentage}% ${clampedPercentage}%)`;
         });
