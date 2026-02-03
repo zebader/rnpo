@@ -36,6 +36,8 @@ This meant that while Holofit performed strongly for its core niche (machine use
 
 As a result, the company was leaving significant growth and revenue on the table.
 
+![Holodia content strategy](../../assets/holodia-content-menu.webp "Holodia content strategy")
+
 ## Strategy & Solution
 
 My objective was to rebalance the product toward the highest-growth segment without harming performance for existing high-value users.
@@ -72,6 +74,11 @@ Each path:
   -Reduced early cognitive load.
 
 This ensured that non-machine users immediately understood how Holofit fit into their lifestyle.
+
+<video autoplay loop muted playsinline width="100%">
+  <source src="/holodia-lobby.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Impact & Metrics
 

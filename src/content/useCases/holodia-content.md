@@ -22,8 +22,6 @@ gamified workouts, monetised through a monthly subscription.
 Sustained engagement is critical to the business model, as long-term usage
 directly drives customer lifetime value.
 
-![Holodia content strategy](../../assets/holodia-content-menu.webp "Holodia content strategy")
-
 ## Business & Problem Definition
 
 While Holofit attracted users through immersive environments, data analysis
@@ -37,11 +35,6 @@ Most users treated environments as one-off experiences:
 
 As a result, usage patterns showed declining session frequency over time,
 limiting the long-term value of subscriptions.
-
-<video autoplay loop muted playsinline width="100%">
-  <source src="/holodia-lobby.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 From a business perspective, this created three risks:
 
