@@ -8,36 +8,87 @@ bg: "holodia-paywall-digital-environment-scene.webp"
 
 ## My role
 
-As the sole Product Manager at Holodia, I worked with our multidisciplinary team and our founders to set the product strategy and design the roadmap. **I conducted user research, user interviews, designed a new onboarding experience, designed a new AR experience from scratch, and worked closely with the CEO, the COO, and the lead engineer.**
+As the sole Product Manager at Holodia, I owned product strategy and roadmap definition, working closely with the founders, CEO, COO, and engineering team.
+
+I led user research and interviews, designed a new onboarding flow, built a new AR experience from scratch, and drove data-informed product decisions across growth, retention, and monetization.
+
+My primary responsibility was identifying and unlocking the company’s largest revenue and retention opportunities.
 
 ## Product
 
-**Holofit is a VR fitness app with a subscription model** designed to motivate users to work out using rowing machines, bikes, ellipticals, and freestyle modes.
+Holofit is a subscription-based VR fitness app designed for users training with rowing machines, bikes, ellipticals, or in freestyle mode.
+
+The product combines immersive virtual environments (“Holoworlds”) with gamified workouts to increase motivation and long-term engagement.
 
 ![Holofit VR fitness app](../../assets/holofit_hero.png "Holofit VR fitness app")
 
-## Problem definition
+## Business & Problem Definition
 
-**By analyzing the data,** we identified significant issues with first-time users understanding what Holofit could offer. Users initially started on a menu and were recommended a combo workout, a workout for users without a machine, regardless of whether they had a fitness machine. **User feedback revealed that many users were unaware of the various gameplays** available and struggled to collect trophies. Data from Amplitude showed that **many first-time users uninstalled the app shortly after a brief play session.** Additionally, most **complaints on the Meta store were about the app being a paid subscription without a free option or trial mode.**
+By analysing Amplitude data, user feedback, and store reviews, I identified a major structural imbalance in Holofit’s growth funnel:
 
-## Solution
+- Users with fitness machines converted 5x better than users without machines.
+- However, ~80% of new users did not own a fitness machine.
+- Freestyle & machine users struggled to understand available gameplays, progression systems, and trophy mechanics.
+- Many users abandoned the app after a short first session.
+- Store reviews consistently mentioned frustration with the paid subscription model and the lack of a meaningful free experience.
 
-We began by **redesigning the paywall** to make it more modern and **user-friendly**. After testing various copies for the Demo option, **we found that "Limited Free Plan" resonated better with potential users.** The previous Demo plan limited playtime to 5 minutes per day; this restriction was removed. Instead,**new users could access two unlocked Holoworlds for unlimited play but encountered a new paywall upon exiting the Holoworld.**
+This meant that while Holofit performed strongly for its core niche (machine users), it was underperforming in its largest addressable market: users without equipment, where competitors like FitXR were already specialised and performing well.
 
-**A video showcasing various Holoworlds** was added to the left side of the paywall, while a carousel with user reviews was added to the right, making it more visually appealing and informative.
+As a result, the company was leaving significant growth and revenue on the table.
 
-Additionally, **we created a comprehensive onboarding experience** tailored to two types of users: those with fitness machines and those using freestyle mode. The onboarding showcased the most popular gameplays that Holofit offered across different environments.
+## Strategy & Solution
 
-## Metrics
+My objective was to rebalance the product toward the highest-growth segment without harming performance for existing high-value users.
 
-- **36% increase in the conversion rate** for freestyle users after releasing the new onboarding.
-- **11% increase in the conversion rate** for machine users after releasing the new onboarding.
-- **117.7% increase in the average time spent per user** in their first 28 days using the app compared to the previous year.
+### 1. Repositioning the Free Experience
 
-## Key takeaways
+We redesigned the paywall to support acquisition and education, not just monetization.
 
-- Understanding user pain points and addressing them effectively can significantly **enhance user engagement and retention.**
-- Tailoring experiences for distinct user segments, such as machine users and freestyle users, **ensures a more personalized and effective onboarding process.**
-- Iterative testing and refining, such as with the **Demo option copy and paywall design, are crucial for optimizing user conversion.**
-- A visually appealing and informative interface, such as adding **videos and user reviews,** can positively impact **user perception and decision-making.**
-- Leveraging data insights to guide decisions leads to measurable **improvements in key metrics like conversion rates and user engagement.**
+- Tested multiple copies for the demo experience.
+- Rebranded “Demo” as “Limited Free Plan”, which tested significantly better.
+- Removed the 5-minute daily usage cap.
+- Introduced unlimited access to two unlocked Holoworlds.
+- Implemented a contextual paywall triggered after meaningful engagement.
+
+To improve perceived value:
+
+- Added a gameplay showcase video.
+- Integrated a carousel with real user reviews.
+
+This reframed the free experience from a short trial into a true entry point.
+
+### 2. Segment-Based Onboarding
+
+We redesigned onboarding around two primary user segments:
+
+- Machine users
+- Freestyle users
+
+Each path:
+
+- Highlighted the most relevant environments and gameplays.
+- Explained progression systems and trophy mechanics.
+- Clarified how to get value without additional equipment.
+  -Reduced early cognitive load.
+
+This ensured that non-machine users immediately understood how Holofit fit into their lifestyle.
+
+## Impact & Metrics
+
+These initiatives directly addressed Holofit’s largest growth bottleneck.
+
+- **+36% conversion rate** for freestyle users
+- **+11% conversion rate** for machine users
+- **+117.7% increase in average time spent per user** in the first 28 days (year-over-year)
+
+Most importantly, the conversion gap between machine and non-machine users narrowed significantly, improving overall revenue efficiency and market reach.
+
+## Key Takeaways
+
+- The biggest growth opportunities often lie in underperforming segments, not top performers.
+- Product strategy must reflect market reality, not internal assumptions.
+- Segment-specific onboarding is critical when user needs differ fundamentally.
+- A strong free experience is a long-term growth lever, not a short-term revenue risk.
+- Combining behavioral data with qualitative research enables confident prioritization.
+
+This project helped shift Holofit from optimizing primarily for a niche audience to scaling toward its largest addressable market.

@@ -1,6 +1,6 @@
 ---
 client: "Holodia"
-title: "Content distribution & replayability"
+title: "Content strategy, distribution & replayability"
 img: "holodia_white.webp"
 id: "holodia"
 bg: "holodia-content-distribution.webp"
@@ -8,45 +8,125 @@ bg: "holodia-content-distribution.webp"
 
 ## My role
 
-As the sole Product Manager at Holodia, I worked with our multidisciplinary team and founders to define the product strategy and roadmap. **I conducted user research and interviews, designed a new onboarding experience, and led the development of a groundbreaking AR experience** from concept to launch. I collaborated closely with the CEO, COO, and lead engineer to ensure our goals aligned with both user needs and business objectives.
+As the sole Lead Product Manager at Holodia, I led the strategy and execution of
+initiatives focused on increasing long-term engagement and subscription value.
+
+I worked closely with founders, engineering, and design to redesign how content
+was released, experienced, and rewarded, with the goal of improving retention and
+lifetime value in a subscription-based product.
 
 ## Product
 
-Holofit is a VR fitness app with a **subscription model that motivates users to work out with rowing machines, bikes, and ellipticals. With captivating virtual environments (Holoworlds)** like Antarctica and underwater scenes, users can immerse themselves in their workouts. However, as a subscription product, maintaining user engagement was a challenge, especially with a small team and limited resources.
+Holofit is a VR fitness application built around immersive environments and
+gamified workouts, monetised through a monthly subscription.
+Sustained engagement is critical to the business model, as long-term usage
+directly drives customer lifetime value.
 
-## Problem definition
+![Holodia content strategy](../../assets/holodia-content-menu.webp "Holodia content strategy")
 
-Holoworlds are the most loved feature by our users, but their **lifecycle was short.** Each world took 4–6 months to produce, meaning we could only release 2–3 Holoworlds per year. Users quickly wore out the novelty of a new Holoworld within 1–2 months, which impacted user engagement.
+## Business & Problem Definition
 
-Additionally, while the **game featured collectible trophies within the Holoworlds and seasonal events, they lacked meaningful rewards.** Users collected trophies simply for the sake of it, with no incentives to 'catch them all' or showcase their achievements
+While Holofit attracted users through immersive environments, data analysis
+and user research revealed a major engagement risk.
+Most users treated environments as one-off experiences:
 
-Our challenge was twofold:
+- Users explored a new world once or twice and then disengaged.
+- Content novelty wore off quickly.
+- Progression felt shallow.
+- There were limited incentives to return to previously completed experiences.
 
-- **Extend the replayability** of Holoworlds without increasing development time.
-- Increase user **motivation to engage with collectible features.**
+As a result, usage patterns showed declining session frequency over time,
+limiting the long-term value of subscriptions.
+
+<video autoplay loop muted playsinline width="100%">
+  <source src="/holodia-lobby.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+From a business perspective, this created three risks:
+
+- Reduced perceived value of the subscription.
+- Lower long-term engagement.
+- Higher likelihood of churn once novelty faded.
+
+To scale sustainably, Holofit needed to transform content from
+“single-use experiences” into long-term engagement loops.
+
+## Strategy
+
+My objective was to increase content replayability and progression depth
+without significantly increasing production costs.
+The strategy focused on three pillars:
+
+- Extend the lifespan of existing content.
+- Introduce long-term progression and goals.
+- Encourage repeated exploration of environments.
+
+This approach aimed to maximise return on existing content investment
+while strengthening retention drivers.
 
 ## Solution
 
-To address these challenges, I first **redesigned the release strategy for Holoworlds.** By utilizing existing **multi-path capabilities,** we released the main track initially and followed up with additional paths each month. **This transformed a single-month release cycle into a 3–4 month rollout, delivering consistent new content without added development effort.**
+### 1. Multi-Stage Content Releases
 
-Next, I introduced **randomization to Holoworlds,** making certain characters and elements appear unpredictably during sessions. This made **environments feel dynamic and 'alive,' extending user interest and engagement.**
+Instead of releasing environments as fully unlocked experiences,
+we introduced staged content rollouts.
 
-Finally, I designed **new unlockable rewards, such as holoships and avatar outfits,** attainable only by collecting all trophies within an environment or seasonal event. This provided users with tangible, shareable incentives to fully engage with the collectible system.
+- New features and routes were unlocked over time.
+- Users were encouraged to revisit environments.
+- Content felt continuously “fresh” without new asset creation.
+
+This created recurring engagement triggers and reduced early content exhaustion.
+
+### 2. Dynamic Environment Variations
+
+We introduced environmental variations such as:
+
+- Day and night cycles
+- Weather conditions
+- Alternative routes
+
+These changes increased perceived variety and made repeat sessions
+feel meaningfully different.
+
+### 3. Reward and Progression System
+
+To reinforce long-term motivation, we redesigned the reward system.
+
+- Added collectible trophies and achievements.
+- Linked rewards to consistent usage.
+- Encouraged exploration across multiple environments.
+
+This shifted user behaviour from passive consumption to goal-oriented engagement.
 
 ## Metrics
 
-These changes led to significant improvements in user engagement:",
+These initiatives significantly improved long-term engagement
+and product value perception:
 
-- **22% increase in total workouts** during the **first four months of Holoworlds released** in chapters compared to previous releases.
-- **A consistent trendline for workouts** in the new Holoworlds, with a noticeable spike at the final chapter release.
-- **53% increase in overall trophies collected** during a season.
-- **470% increase in users who collected all trophies** in a season compared to the previous year.
-- **36.7% increase in average monthly time spent** per user compared to the previous year.
+- **+36.7% increase in average monthly time spent per user (YoY)**
+- Strong uplift in repeat sessions and environment revisits
+- Increased depth of progression across user cohorts
+
+By extending the lifecycle of existing content, the product
+delivered more value per user without proportional increases in development cost.
+
+## Business Impact
+
+This work strengthened Holofit’s subscription model by:
+
+- Increasing perceived value of membership
+- Encouraging habitual usage
+- Improving return on content investment
+- Supporting long-term revenue stability
+
+It enabled the company to scale engagement without relying
+solely on continuous new content production.
 
 ## Key takeaways
 
-- How to **maximize content value** through innovative release strategies, even with limited resources.
-- The importance of **introducing variability and unpredictability** to extend user engagement.
-- The power of **meaningful rewards in driving user motivation** and retention.
-- A **deep understanding of user behavior and data analysis,** enabling impactful product decisions.
-- The **value of aligning user and business goals** to achieve measurable success.
+- In subscription products, engagement depth is as critical as acquisition.
+- Extending content lifespan can unlock significant business value.
+- Progression systems are powerful drivers of long-term behaviour.
+- Retention strategy should be embedded in product design, not added later.
+- Maximising ROI on existing assets is essential in resource-constrained teams.
