@@ -8,94 +8,146 @@ bg: "holodia-paywall-digital-environment-scene.webp"
 
 ## My role
 
-As the sole Product Manager at Holodia, I owned product strategy and roadmap definition, working closely with the founders, CEO, COO, and engineering team.
+As the sole Product Manager at Holodia, I owned product strategy and roadmap definition, working At Holodia, I was the first and sole Product Manager. I owned product strategy, roadmap definition, and monetization, working closely with the founders, CEO, COO, and engineering team.
 
-I led user research and interviews, designed a new onboarding flow, built a new AR experience from scratch, and drove data-informed product decisions across growth, retention, and monetization.
+Because the company had never had a PM before, part of my role was introducing more structured, data-informed decision-making. I led user research, defined priorities, and drove initiatives across growth, retention, and revenue.
 
-My primary responsibility was identifying and unlocking the company’s largest revenue and retention opportunities.
+My main responsibility was identifying and unlocking the company’s largest growth opportunities.
 
-## Product
+## Product Context
 
-Holofit is a subscription-based VR fitness app designed for users training with rowing machines, bikes, ellipticals, or in freestyle mode.
+Holofit is a subscription-based VR fitness app for users training with rowing machines, bikes, ellipticals, or in freestyle mode without equipment.
 
-The product combines immersive virtual environments (“Holoworlds”) with gamified workouts to increase motivation and long-term engagement.
+The product combines immersive virtual environments with gamified workouts to increase motivation and long-term engagement.
 
 ![Holofit VR fitness app](../../assets/holofit_hero.png "Holofit VR fitness app")
 
-## Business & Problem Definition
+## Problem & Opportunity
 
-By analysing Amplitude data, user feedback, and store reviews, I identified a major structural imbalance in Holofit’s growth funnel:
+When I analyzed our funnel using Amplitude, store reviews, and user interviews, I identified a major structural imbalance.
 
-- Users with fitness machines converted 5x better than users without machines.
-- However, ~80% of new users did not own a fitness machine.
-- Freestyle & machine users struggled to understand available gameplays, progression systems, and trophy mechanics.
-- Many users abandoned the app after a short first session.
-- Store reviews consistently mentioned frustration with the paid subscription model and the lack of a meaningful free experience.
+Users with fitness machines converted five times better than users without machines.However, around 80% of new users did not own equipment.
 
-This meant that while Holofit performed strongly for its core niche (machine users), it was underperforming in its largest addressable market: users without equipment, where competitors like FitXR were already specialised and performing well.
+At the same time:
 
-As a result, the company was leaving significant growth and revenue on the table.
+- Users struggled to understand onboarding and progression.
+- Many abandoned the app after a very short first session.
+- Store reviews mentioned frustration with paying before experiencing real value.
+
+This meant that Holofit performed well in a niche segment but underperformed in its largest addressable market. We were leaving significant growth and revenue on the table.
 
 ![Holodia content strategy](../../assets/holodia-content-menu.webp "Holodia content strategy")
 
-## Strategy & Solution
+## User Insights
 
-My objective was to rebalance the product toward the highest-growth segment without harming performance for existing high-value users.
+Quantitative analysis showed high early churn and low activation among freestyle users.
+
+Qualitative interviews revealed that:
+
+- Users didn’t understand what success looked like in the app.
+- They felt blocked too early by the paywall.
+- They didn’t know how to get value without equipment.
+
+This showed that the core issue was not product quality, but unclear onboarding and poor value communication.
+
+## Strategy & Prioritization
+
+Given limited engineering capacity, I had to balance core product improvements with a major external opportunity.
+
+At the same time we identified onboarding and monetization issues, we were offered a sponsorship to build a new AR mini-game. An important VR company would finance its development and promote it prominently in their App Store, giving us significant distribution and brand exposure.
+
+This was a high-impact growth opportunity, but it required substantial engineering effort and had a fixed delivery timeline.
+
+As a result, we couldn’t fully redesign onboarding and build the AR experience in parallel.
+I therefore reframed the roadmap around two goals:
+
+- Deliver a minimum valuable version of the new onboarding and paywall that could improve conversion quickly
+- Allocate enough capacity to ship the sponsored AR game on time and maximize the partnership benefits
+
+We prioritized high-leverage changes, such as paywall positioning, removing restrictive limits, and simplifying early flows, while postponing deeper onboarding iterations.
+
+This allowed us to improve monetization and activation in the short term, while also leveraging Meta’s promotion to accelerate acquisition.
+
+The main trade-off was speed versus depth: we accepted a more incremental onboarding rollout in exchange for a major distribution boost.
+
+## Solution
 
 ### 1. Repositioning the Free Experience
 
-We redesigned the paywall to support acquisition and education, not just monetization.
+We redesigned the paywall to support acquisition and education, not only monetization.
+We:
 
-- Tested multiple copies for the demo experience.
-- Rebranded “Demo” as “Limited Free Plan”, which tested significantly better.
-- Removed the 5-minute daily usage cap.
-- Introduced unlimited access to two unlocked Holoworlds.
-- Implemented a contextual paywall triggered after meaningful engagement.
+- Tested multiple demo copies
+- Rebranded “Demo” as “Limited Free Plan”
+- Removed the 5-minute usage cap
+- Introduced unlimited access to two environments
+- Added a contextual paywall after meaningful engagement
 
-To improve perceived value:
+To improve perceived value, we added:
 
-- Added a gameplay showcase video.
-- Integrated a carousel with real user reviews.
+- A gameplay showcase video
+- A carousel with real user reviews
+- This reframed the free experience from a restriction into a true entry point.
 
-This reframed the free experience from a short trial into a true entry point.
+## 2. Segment-Based Onboarding
 
-### 2. Segment-Based Onboarding
-
-We redesigned onboarding around two primary user segments:
+We redesigned onboarding around two primary segments:
 
 - Machine users
 - Freestyle users
 
-Each path:
+Each journey:
 
-- Highlighted the most relevant environments and gameplays.
-- Explained progression systems and trophy mechanics.
-- Clarified how to get value without additional equipment.
-  -Reduced early cognitive load.
+- Highlighted relevant environments
+- Explained progression and trophies
+- Clarified how to get value without equipment
+- Reduced early cognitive load
 
-This ensured that non-machine users immediately understood how Holofit fit into their lifestyle.
+This ensured users immediately understood how Holofit fit into their lifestyle.
 
 <video autoplay loop muted playsinline width="100%">
   <source src="/holodia-lobby.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
+## Delivery & Validation
+
+Because Holofit is a VR app distributed through platform stores, we couldn’t easily run traditional A/B tests.
+
+Instead, I designed a quasi-experimental approach using historical benchmarks and cohort analysis.
+We:
+
+- Compared performance against the previous three months
+- Analyzed new-user cohorts before and after launch
+- Controlled for seasonality and acquisition sources
+
+This allowed us to validate impact despite technical constraints.
+
+We rolled out changes iteratively using feature flags and monitored behavior closely before scaling.
+
 ## Impact & Metrics
 
-These initiatives directly addressed Holofit’s largest growth bottleneck.
+We defined success around activation, conversion, and early retention.
 
-- **+36% conversion rate** for freestyle users
-- **+11% conversion rate** for machine users
-- **+117.7% increase in average time spent per user** in the first 28 days (year-over-year)
+Compared to the previous three months:
 
-Most importantly, the conversion gap between machine and non-machine users narrowed significantly, improving overall revenue efficiency and market reach.
+- Freestyle conversion increased by 36%
+- Machine user conversion increased by 11%
+- Average time spent in the first 28 days increased by 117%
+- Review scores improved from around 3.5 to 3.8
 
-## Key Takeaways
+The increase in early engagement was particularly important because it strongly correlated with long-term retention and subscription likelihood.
 
-- The biggest growth opportunities often lie in underperforming segments, not top performers.
-- Product strategy must reflect market reality, not internal assumptions.
-- Segment-specific onboarding is critical when user needs differ fundamentally.
-- A strong free experience is a long-term growth lever, not a short-term revenue risk.
-- Combining behavioral data with qualitative research enables confident prioritization.
+Most importantly, the conversion gap between machine and non-machine users narrowed significantly, improving revenue efficiency and scalability.
 
-This project helped shift Holofit from optimizing primarily for a niche audience to scaling toward its largest addressable market.
+## Risks & Ambiguity
+
+At the beginning, it was unclear whether low conversion was driven by pricing, product quality, or misunderstanding.
+
+We reduced uncertainty through:
+
+- Funnel analysis
+- User interviews
+- Small experiments before major changes
+
+The biggest risk was harming short-term revenue. We mitigated it by monitoring churn weekly and being ready to roll back changes if needed.
