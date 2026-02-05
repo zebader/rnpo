@@ -89,7 +89,12 @@ To improve perceived value, we added:
 - A carousel with real user reviews
 - This reframed the free experience from a restriction into a true entry point.
 
-## 2. Segment-Based Onboarding
+<video autoplay loop muted playsinline width="100%">
+  <source src="/holodia-lobby.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### 2. Segment-Based Onboarding
 
 We redesigned onboarding around two primary segments:
 
@@ -104,11 +109,6 @@ Each journey:
 - Reduced early cognitive load
 
 This ensured users immediately understood how Holofit fit into their lifestyle.
-
-<video autoplay loop muted playsinline width="100%">
-  <source src="/holodia-lobby.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Delivery & Validation
 
