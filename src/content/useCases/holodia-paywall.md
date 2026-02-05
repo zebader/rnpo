@@ -123,8 +123,6 @@ We:
 
 This allowed us to validate impact despite technical constraints.
 
-We rolled out changes iteratively using feature flags and monitored behavior closely before scaling.
-
 ## Impact & Metrics
 
 We defined success around activation, conversion, and early retention.
